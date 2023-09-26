@@ -8,18 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		594522322AC2E612001DDACB /* TCA_TreeBasedNavBugApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594522312AC2E612001DDACB /* TCA_TreeBasedNavBugApp.swift */; };
-		594522342AC2E612001DDACB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594522332AC2E612001DDACB /* ContentView.swift */; };
 		594522362AC2E613001DDACB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 594522352AC2E613001DDACB /* Assets.xcassets */; };
 		5945223A2AC2E613001DDACB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 594522392AC2E613001DDACB /* Preview Assets.xcassets */; };
+		594522422AC2E633001DDACB /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594522412AC2E633001DDACB /* AppReducer.swift */; };
+		594522442AC2E638001DDACB /* FirstReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594522432AC2E638001DDACB /* FirstReducer.swift */; };
+		594522462AC2E63E001DDACB /* SecondReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594522452AC2E63E001DDACB /* SecondReducer.swift */; };
+		594522482AC2E643001DDACB /* ThirdReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594522472AC2E643001DDACB /* ThirdReducer.swift */; };
+		5945224B2AC2E68B001DDACB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 5945224A2AC2E68B001DDACB /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5945222E2AC2E612001DDACB /* TCA-TreeBasedNavBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA-TreeBasedNavBug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		594522312AC2E612001DDACB /* TCA_TreeBasedNavBugApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_TreeBasedNavBugApp.swift; sourceTree = "<group>"; };
-		594522332AC2E612001DDACB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		594522352AC2E613001DDACB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		594522372AC2E613001DDACB /* TCA_TreeBasedNavBug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TCA_TreeBasedNavBug.entitlements; sourceTree = "<group>"; };
 		594522392AC2E613001DDACB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		594522412AC2E633001DDACB /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		594522432AC2E638001DDACB /* FirstReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstReducer.swift; sourceTree = "<group>"; };
+		594522452AC2E63E001DDACB /* SecondReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondReducer.swift; sourceTree = "<group>"; };
+		594522472AC2E643001DDACB /* ThirdReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5945224B2AC2E68B001DDACB /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +60,8 @@
 		594522302AC2E612001DDACB /* TCA-TreeBasedNavBug */ = {
 			isa = PBXGroup;
 			children = (
+				594522402AC2E628001DDACB /* Features */,
 				594522312AC2E612001DDACB /* TCA_TreeBasedNavBugApp.swift */,
-				594522332AC2E612001DDACB /* ContentView.swift */,
 				594522352AC2E613001DDACB /* Assets.xcassets */,
 				594522372AC2E613001DDACB /* TCA_TreeBasedNavBug.entitlements */,
 				594522382AC2E613001DDACB /* Preview Content */,
@@ -67,6 +75,17 @@
 				594522392AC2E613001DDACB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		594522402AC2E628001DDACB /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				594522412AC2E633001DDACB /* AppReducer.swift */,
+				594522432AC2E638001DDACB /* FirstReducer.swift */,
+				594522452AC2E63E001DDACB /* SecondReducer.swift */,
+				594522472AC2E643001DDACB /* ThirdReducer.swift */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +104,9 @@
 			dependencies = (
 			);
 			name = "TCA-TreeBasedNavBug";
+			packageProductDependencies = (
+				5945224A2AC2E68B001DDACB /* ComposableArchitecture */,
+			);
 			productName = "TCA-TreeBasedNavBug";
 			productReference = 5945222E2AC2E612001DDACB /* TCA-TreeBasedNavBug.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +135,9 @@
 				Base,
 			);
 			mainGroup = 594522252AC2E612001DDACB;
+			packageReferences = (
+				594522492AC2E68B001DDACB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 5945222F2AC2E612001DDACB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				594522342AC2E612001DDACB /* ContentView.swift in Sources */,
+				594522482AC2E643001DDACB /* ThirdReducer.swift in Sources */,
+				594522462AC2E63E001DDACB /* SecondReducer.swift in Sources */,
+				594522422AC2E633001DDACB /* AppReducer.swift in Sources */,
 				594522322AC2E612001DDACB /* TCA_TreeBasedNavBugApp.swift in Sources */,
+				594522442AC2E638001DDACB /* FirstReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +387,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		594522492AC2E68B001DDACB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5945224A2AC2E68B001DDACB /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 594522492AC2E68B001DDACB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 594522262AC2E612001DDACB /* Project object */;
 }
